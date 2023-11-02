@@ -1,34 +1,73 @@
 {
   "compilerOptions": {
+    // 출력 디렉토리 설정. TypeScript는 여기에 JavaScript 파일을 생성함
     "outDir": "./dist/",
+
+    // 컴파일된 JavaScript의 ECMAScript 버전 설정
     "target": "ESNext",
+
+    // 클래스 필드 선언에 대한 정의를 사용
     "useDefineForClassFields": true,
+
+    // 모듈 코드 생성 방식을 설정
     "module": "ESNext",
+
+    // 컴파일에 포함될 라이브러리 파일 목록
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
+
+    // 모든 선언 파일에 대한 유형 검사를 건너뜀
     "skipLibCheck": true,
+
+    // 소스 맵을 생성하여 디버깅을 도움
     "sourceMap": true,
+
+    // 모든 엄격한 타입 검사 옵션을 활성화
     "strict": true,
+
+    // 함수가 모든 경로에서 값을 반환하도록 함
     "noImplicitReturns": true,
+
+    // 모듈 해석 전략을 설정. 여기서는 Node.js 방식을 사용
     "moduleResolution": "node",
+
+    // JSX 구문을 위한 설정
     "jsx": "react-jsx",
+
+    // CommonJS 모듈과의 호환성을 향상
     "esModuleInterop": true,
+
+    // 기본 import를 허용
     "allowSyntheticDefaultImports": true,
+
+    // TypeScript가 유형 선언을 검색할 위치를 지정
     "typeRoots": ["./typings", "./node_modules/@types"],
+
+    // 컴파일에 포함될 유형 선언의 목록
     "types": ["react", "node"],
 
+    // 비 상대적 모듈 이름을 해석하는 방법을 지정
     "baseUrl": ".",
+
+    // 경로 별칭 설정. "@/*"은 "./src/*"로 해석
     "paths": {
       "@/*": ["./src/*"]
     },
 
     /* Bundler mode */
+    // JSON 모듈을 import 할 수 있게 함
     "resolveJsonModule": true,
+    // 각 파일을 별도의 모듈로 간주
     "isolatedModules": true,
 
     /* Linting */
+    // 사용되지 않는 로컬 변수에 대한 오류를 발생 시킴
     "noUnusedLocals": true,
+    // 사용되지 않는 매개변수에 대한 오류를 발생 시킴
     "noUnusedParameters": true,
+    // switch 문에서 case 절이 빠지면 오류를 발생시킴
     "noFallthroughCasesInSwitch": true
   },
+
+  // 컴파일할 파일 또는 디렉토리의 목록
   "include": ["src"]
 }
